@@ -1,1 +1,0 @@
-export const urlFollowers = 'https://api.github.com/users';

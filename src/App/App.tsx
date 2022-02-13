@@ -1,17 +1,14 @@
-import { useState } from 'react';
-import { Grommet } from 'grommet';
-import MyHeader from '../Components/Header/Header';
-import MyTheme from '../theme';
+import { Grommet, Box, Heading } from 'grommet';
+import Todos from '../Components/Todos/Todos';
 import '../styles.css';
 
-const App = (): JSX.Element => {
-  const [theme, setTheme] = useState<boolean>(false);
-
-  return(
-    <Grommet full theme={MyTheme} themeMode={(theme) ? 'dark' : 'light'}>
-      <MyHeader title="NVS Git Fetch" theme={theme} onChangeTheme={setTheme} />
-    </Grommet>
-  );
-};
+const App = (): JSX.Element => (
+  <Grommet full>
+    <Box fill="horizontal" align="center" justify="center" pad="large">
+      <Heading level={1}>NVS TODOS</Heading>
+    </Box>
+    <Todos />
+  </Grommet>
+);
 
 export default App;
